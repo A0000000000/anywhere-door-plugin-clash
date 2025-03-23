@@ -14,7 +14,14 @@ export default {
         })
     },
     'mode': async function (cmds, extend) {
-        const type = cmds[0]
+        const arr = []
+        if (cmds.length < 2) {
+            return cmdConstant.RESULT_CMD_PARAMS_ERROR
+        }
+        const type = cmds[1]
+        if (type.toLowerCase() !== 'rule' || type.toLowerCase() !== 'global' || type.toLowerCase() !== 'direct') {
+            return cmdConstant.RESULT_NO_MODE
+        }
         const beforeConfig = (await extend.axiosClash.get('/configs')).data
         if (type.toLowerCase() === beforeConfig.mode.toLowerCase()) {
             return cmdConstant.RESULT_SUCCESS_NO_CHANGE
