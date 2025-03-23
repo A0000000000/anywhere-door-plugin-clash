@@ -1,0 +1,5 @@
+ClashBot帮助信息
+1. mode [type]
+    * Direct: 运行模式切换为直连
+    * Rule: 运行模式切换为规则
+    * Global: 运行模式切换为全局

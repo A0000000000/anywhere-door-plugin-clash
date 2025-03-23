@@ -1,2 +1,2 @@
 # anywhere-door-plugin-clash
-AnywhereDoor下OpenClash插件
+* AnywhereDoor下OpenClash插件
