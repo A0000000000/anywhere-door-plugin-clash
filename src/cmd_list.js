@@ -19,7 +19,7 @@ export default {
             return cmdConstant.RESULT_CMD_PARAMS_ERROR
         }
         const type = cmds[1]
-        if (type.toLowerCase() !== 'rule' || type.toLowerCase() !== 'global' || type.toLowerCase() !== 'direct') {
+        if (type.toLowerCase() !== 'rule' && type.toLowerCase() !== 'global' && type.toLowerCase() !== 'direct') {
             return cmdConstant.RESULT_NO_MODE
         }
         const beforeConfig = (await extend.axiosClash.get('/configs')).data
